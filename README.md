@@ -1,7 +1,7 @@
 # flatbuffer
 flat buffer streaming encoder (cpp) &amp; decoder (cpp &amp; python)
 
-Instruction:
+Instructions:
 
 A. How to compile & run flat buffer encoder:
 
