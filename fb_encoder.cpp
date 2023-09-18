@@ -5,13 +5,13 @@
 #include <vector>
 #include <string>
 
-// Define a base class for message handlers
+// Base class for message handlers
 class MessageHandler {
 public:
     virtual void HandleMessage(int i, flatbuffers::FlatBufferBuilder& header_builder, flatbuffers::FlatBufferBuilder& message_builder, std::ofstream& outfile) = 0;
 };
 
-// Define a class for Type_Person message handling
+// Class for Type_Person message handling
 class PersonMessageHandler : public MessageHandler {
 public:
     void HandleMessage(int i, flatbuffers::FlatBufferBuilder& header_builder, flatbuffers::FlatBufferBuilder& person_builder, std::ofstream& outfile) override {
@@ -46,7 +46,7 @@ public:
     }
 };
 
-// Define a class for Type_Group message handling
+// Class for Type_Group message handling
 class GroupMessageHandler : public MessageHandler {
 public:
     void HandleMessage(int i, flatbuffers::FlatBufferBuilder& header_builder, flatbuffers::FlatBufferBuilder& group_builder, std::ofstream& outfile) override {
@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
 
     std::string outputFileName = argv[1];
 
-    // Create FlatBuffer builders for header and messages outside the loop
+    // Create FlatBuffer builders for header and messages
     flatbuffers::FlatBufferBuilder header_builder;
     flatbuffers::FlatBufferBuilder message_builder;
 
