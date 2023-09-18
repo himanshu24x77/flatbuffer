@@ -1,10 +1,9 @@
 import sys
 import struct
 import flatbuffers
-#import Header, Person, Group, Gender, Type, VerifyHeaderBuffer, EnumNameType, EnumNameGender
 import Header, Person, Group, Gender, Type
 
-# Define event handler interface
+# event handler interface
 class EventHandler:
     def handle_event(self, data, size):
         pass
@@ -12,11 +11,6 @@ class EventHandler:
 # Event handler for Header
 class HeaderHandler(EventHandler):
     def handle_event(self, data, size):
-        #verifier = flatbuffers.Verifier(data, 0)
-        #if not VerifyHeaderBuffer(verifier):
-        #    print("Error: Invalid header in the binary data.")
-        #    return
-
         header = Header.Header.GetRootAsHeader(data, 0)
 
         print("--Header--")
@@ -62,10 +56,6 @@ def main():
             groupHandler = GroupHandler()
 
             while buffer:
-                #verifier = flatbuffers.Verifier(buffer, 0)
-                #if not VerifyHeaderBuffer(verifier):
-                #    print("Error: Invalid header in the binary data.")
-                #    return
 
                 header = Header.Header.GetRootAsHeader(buffer, 0)
                 headerHandler.handle_event(buffer, header_size)
