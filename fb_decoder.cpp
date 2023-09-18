@@ -4,7 +4,7 @@
 #include <fstream>
 #include <vector>
 
-// Define event handler interface
+// event handler interface
 class EventHandler {
 public:
     virtual void HandleEvent(const uint8_t* data, size_t size) = 0;
@@ -83,7 +83,7 @@ int main(int argc, char* argv[]) {
     GroupHandler groupHandler;
 
     while (true) {
-        // Read the entire binary data into a buffer
+        // Read the binary data of length header_size into a buffer
         infile.read(reinterpret_cast<char*>(buffer.data()), header_size);
 
         if (infile.eof()) {
