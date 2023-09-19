@@ -60,7 +60,7 @@ flat buffer streaming encoder (cpp) &amp; decoder (cpp &amp; python)
     How to generate cpp auto generated code using flatc compiler for python decoder:
     flatc --python --gen-mutable client.fbs
 
-**_A. How to compile & run flat buffer encoder:_**
+**_A. How to compile & run flat buffer encoder (cpp):_**
 
     1. To compile fb_encoder.cpp ->     
         g++ -g -o fb_encoder fb_encoder.cpp -I .
