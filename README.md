@@ -16,3 +16,18 @@ B. How to compile & run flat buffer decoder (cpp):
 C. How to run flat buffer decoder (python):
  .
 1. To run ->                        python3.9 fb_decoder.py data.bin
+
+Schema file:
+client.fbs
+
+List of auto generated c++ (header) source code using flatc compiler:
+
+client_generated.h
+
+List of auto generated python source code using flatc compiler:
+
+Gender.py
+Group.py
+Header.py
+Person.py
+Type.py
