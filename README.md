@@ -1,6 +1,16 @@
 # flatbuffer
 flat buffer streaming encoder (cpp) &amp; decoder (cpp &amp; python)
 
+Solution Description:
+
+1. fb_encoder: It always write a header message as a seperator before writing Person or Group message. Header message contains two fields i.e msg_length & Type to indentify type & msg_length of next message to be read.
+2. fb_decoder: It reads header first and then using msg_length & type info from header it reads actual Person or Group message & print the content.
+
+Future Improvements:
+
+1. Current version is not optimized for low latency and focused more on functionality, it can be optimized further.
+2. Code doesn't not handle edge cases for example in streaming TCP protocol we might not recieve complete header or message but recieve only a fraction, this case need to be handled by buffering a part of Header or message and processes it once we recieve complete message.
+
 Instructions:
 
 A. How to compile & run flat buffer encoder:
