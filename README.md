@@ -6,22 +6,6 @@ flat buffer streaming encoder (cpp) &amp; decoder (cpp &amp; python)
 1. *fb_encoder:* Always precedes a Person or Group message with a header message. The header contains two fields: `msg_length` and `Type` to identify the type and length of the next message.
 2. *fb_decoder:* Reads the fixed-length header first and then, using the `msg_length` and `Type` information from the header, reads the actual Person or Group message and prints its content.
 
-**Instructions:**
-
-**_A. How to compile & run flat buffer encoder:_**
-
-1. To compile fb_encoder.cpp ->     g++ -g -o fb_encoder fb_encoder.cpp -I .
-2. To run ->                        ./fb_encoder data.bin
-
-**_B. How to compile & run flat buffer decoder (cpp):_**
-
-1. To compile fb_decoder.cpp ->     g++ -g -o fb_decoder fb_decoder.cpp -I .
-2. To run ->                        ./fb_decoder data.bin
-
-**_C. How to run flat buffer decoder (python):_**
- .
-1. To run ->                        python3.9 fb_decoder.py data.bin
-
 **Schema file:** client.fbs
 
 enum Gender: ubyte {
@@ -67,6 +51,29 @@ Group.py
 Header.py
 Person.py
 Type.py
+
+**Instructions (Compile & Run):**
+
+How to generate cpp auto generated code using flatc compiler for cpp encoder & decoder :
+flatc --cpp --gen-mutable client.fbs
+
+How to generate cpp auto generated code using flatc compiler for python decoder:
+flatc --python --gen-mutable client.fbs
+
+**_A. How to compile & run flat buffer encoder:_**
+
+1. To compile fb_encoder.cpp ->     g++ -g -o fb_encoder fb_encoder.cpp -I .
+2. To run ->                        ./fb_encoder data.bin
+
+**_B. How to compile & run flat buffer decoder (cpp):_**
+
+1. To compile fb_decoder.cpp ->     g++ -g -o fb_decoder fb_decoder.cpp -I .
+2. To run ->                        ./fb_decoder data.bin
+
+**_C. How to run flat buffer decoder (python):_**
+ .
+1. To run ->                        python3.9 fb_decoder.py data.bin
+
 
 ***Future Scope & Improvements:***
 
