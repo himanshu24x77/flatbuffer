@@ -62,18 +62,22 @@ flat buffer streaming encoder (cpp) &amp; decoder (cpp &amp; python)
 
 **_A. How to compile & run flat buffer encoder:_**
 
-    1. To compile fb_encoder.cpp ->     g++ -g -o fb_encoder fb_encoder.cpp -I .
-    2. To run ->                        ./fb_encoder data.bin
+    1. To compile fb_encoder.cpp ->     
+        g++ -g -o fb_encoder fb_encoder.cpp -I .
+    2. To run ->                        
+        ./fb_encoder data.bin
 
 **_B. How to compile & run flat buffer decoder (cpp):_**
 
-    1. To compile fb_decoder.cpp ->     g++ -g -o fb_decoder fb_decoder.cpp -I .
-    2. To run ->                        ./fb_decoder data.bin
+    1. To compile fb_decoder.cpp ->     
+        g++ -g -o fb_decoder fb_decoder.cpp -I .
+    2. To run ->                        
+        ./fb_decoder data.bin
 
 **_C. How to run flat buffer decoder (python):_**
  .
-    1. To run ->                        python3.9 fb_decoder.py data.bin
-
+    1. To run ->                        
+        python3.9 fb_decoder.py data.bin
 
 ***Future Scope & Improvements:***
 
