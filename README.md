@@ -46,74 +46,43 @@ Type.py
 
 **Output (Decoder) | Once you run fb_decoder (c++ or python), you should be able to see below decoder logs :**
 
---Header--
-Message Length: 44
-Message Type: Person
---Person--
-Person Name: John
-Person Age: 30
-Person Weight: 70.5
-Person Gender: Male
---Header--
-Message Length: 80
-Message Type: Group
---Group--
-Group: WWE, Average Age: 36, Average Weight: 71
+--Header-- 
+Message Length: 44 
+Message Type: Person 
+--Person-- 
+Person Name: John 
+Person Age: 30 
+Person Weight: 70.5 
+Person Gender: Male 
+--Header-- 
+Message Length: 80 
+Message Type: Group 
+--Group-- 
+Group: WWE, 
+Average Age: 36, 
+Average Weight: 71 
 Names: Rock Khali 
---Header--
-Message Length: 44
-Message Type: Person
---Person--
-Person Name: John
-Person Age: 32
-Person Weight: 72.5
-Person Gender: Male
---Header--
-Message Length: 80
-Message Type: Group
---Group--
-Group: WWE, Average Age: 38, Average Weight: 73
+--Header-- 
+Message Length: 44 
+Message Type: Person 
+--Person-- 
+Person Name: John 
+Person Age: 32 
+Person Weight: 72.5 
+Person Gender: Male 
+--Header-- 
+Message Length: 80 
+Message Type: Group 
+--Group-- 
+Group: WWE, 
+Average Age: 38, 
+Average Weight: 73 
 Names: Rock Khali 
---Header--
-Message Length: 44
-Message Type: Person
---Person--
-Person Name: John
-Person Age: 34
-Person Weight: 74.5
-Person Gender: Male
---Header--
-Message Length: 80
-Message Type: Group
---Group--
-Group: WWE, Average Age: 40, Average Weight: 75
-Names: Rock Khali 
---Header--
-Message Length: 44
-Message Type: Person
---Person--
-Person Name: John
-Person Age: 36
-Person Weight: 76.5
-Person Gender: Male
---Header--
-Message Length: 80
-Message Type: Group
---Group--
-Group: WWE, Average Age: 42, Average Weight: 77
-Names: Rock Khali 
---Header--
-Message Length: 44
-Message Type: Person
---Person--
-Person Name: John
-Person Age: 38
-Person Weight: 78.5
-Person Gender: Male
---Header--
-Message Length: 80
-Message Type: Group
---Group--
-Group: WWE, Average Age: 44, Average Weight: 79
-Names: Rock Khali 
-Reached the end of the file.
+--Header-- 
+Message Length: 44 
+Message Type: Person 
+--Person-- 
+Person Name: John 
+Person Age: 34 
+Person Weight: 74.5 
+Person Gender: Male 
