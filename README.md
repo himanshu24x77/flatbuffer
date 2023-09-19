@@ -76,7 +76,7 @@ flat buffer streaming encoder (cpp) &amp; decoder (cpp &amp; python)
 
 **_C. How to run flat buffer decoder (python):_**
  .
-    1. To run ->                        
+    1. To run ->
         python3.9 fb_decoder.py data.bin
 
 ***Future Scope & Improvements:***
