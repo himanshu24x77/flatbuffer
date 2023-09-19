@@ -22,8 +22,39 @@ flat buffer streaming encoder (cpp) &amp; decoder (cpp &amp; python)
  .
 1. To run ->                        python3.9 fb_decoder.py data.bin
 
-**Schema file:**
-client.fbs
+**Schema file:** client.fbs
+
+enum Gender: ubyte {
+  Male = 0,
+  Female = 1,
+}
+
+enum Type: ushort {
+  Invalid = 0,
+  Person = 1,
+  Group = 2,
+}
+
+table Header {
+  msg_len: int32;
+  msg_type: Type;
+}
+
+table Group {
+  group_name: string;
+  average_age: ushort;
+  average_weight: float32;
+  names: [string];
+}
+
+table Person {
+  name: string;
+  age: ushort;
+  weight: float32;
+  gender: Gender;
+}
+
+root_type Header;
 
 **List of auto generated c++ (header) source code using flatc compiler:**
 
