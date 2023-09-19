@@ -3,13 +3,8 @@ flat buffer streaming encoder (cpp) &amp; decoder (cpp &amp; python)
 
 Solution Description:
 
-1. fb_encoder: It always write a header message as a seperator before writing Person or Group message. Header message contains two fields i.e msg_length & Type to indentify type & msg_length of next message to be read.
-2. fb_decoder: It reads header first and then using msg_length & type info from header it reads actual Person or Group message & print the content.
-
-Future Improvements:
-
-1. Current version is not optimized for low latency and focused more on functionality, it can be optimized further.
-2. Code doesn't not handle edge cases for example in streaming TCP protocol we might not recieve complete header or message but recieve only a fraction, this case need to be handled by buffering a part of Header or message and processes it once we recieve complete message.
+1. fb_encoder: It always writes a header message as a seperator before writing a Person or Group message. Header message contains two fields i.e msg_length & Type to identify type & msg_length of next message to be read.
+2. fb_decoder: It reads fixed length header first and then using msg_length & type info from header it reads actual Person or Group message & print the content.
 
 Instructions:
 
@@ -41,6 +36,15 @@ Group.py
 Header.py
 Person.py
 Type.py
+
+
+Future Scope & Improvements:
+
+1. Current version is not optimized for low latency and focused more on functionality, it has a lot of scope can be optimized further.
+2. Code doesn't not handle edge cases, for example in streaming TCP protocol we might not receive complete header or actual message (Person/Group) but receive only a fraction, this case needs to be handled by buffering a part of Header or actual message (Person/Group) and processes it once we receive complete message.
+3. Similar streaming solutions can be ported to TCP or UDP.
+4. Further design improvements.
+
 
 Output (Decoder) | Once you run fb_decoder (c++ or python), you should be able to see below decoder logs :
 
